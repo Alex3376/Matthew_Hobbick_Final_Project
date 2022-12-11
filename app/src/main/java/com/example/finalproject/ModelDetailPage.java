@@ -1,3 +1,4 @@
+// Matthew Hobbick
 package com.example.finalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,12 +14,15 @@ public class ModelDetailPage extends AppCompatActivity {
         setContentView(R.layout.activity_model_detail_page);
         SecondActivity.Book book = (SecondActivity.Book) getIntent().getSerializableExtra("Book");
         // Title
-        TextView authorText = findViewById(R.id.textView);
-        authorText.setText(book.getTitle());
+        TextView titleText = findViewById(R.id.textView);
+        titleText.setText(book.getTitle());
         // description
         TextView descriptText = findViewById(R.id.textView3);
         descriptText.setText(book.getDescription());
         // author
+        TextView mText = findViewById(R.id.textView4);
+        mText.setText(book.getAuthor());
+
 
     }
 
